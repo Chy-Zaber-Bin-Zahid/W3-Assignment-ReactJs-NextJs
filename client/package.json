@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.4.8",
+    "@phosphor-icons/react": "^2.1.7",
+    "axios": "^1.7.7",
     "framer-motion": "^11.11.15",
     "next": "15.0.3",
+    "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

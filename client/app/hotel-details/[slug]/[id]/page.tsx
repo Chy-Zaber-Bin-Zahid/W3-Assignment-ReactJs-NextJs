@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Hotel() {
+function HotelDetails() {
   return (
     <div className="bg-yellow-200 p-4 flex justify-center items-center" >
-        Hotel
+        HotelDetails
     </div>
   )
 }
 
-export default Hotel
+export default HotelDetails

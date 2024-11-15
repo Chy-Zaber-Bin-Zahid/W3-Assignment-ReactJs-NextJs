@@ -1,87 +1,85 @@
 'use client'
-import {Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-import { useState } from "react";
+
+import { useState } from "react"
+import Link from "next/link"
+import { Globe, X, List } from "@phosphor-icons/react"
 
 export default function Nav() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const menuItems: string[] = [
+    "United States",
+    "Trip Boards",
+    "List your property",
+    "Help",
+    "My trips",
+    "Sign in",
+  ]
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   return (
-    <Navbar
-      isBordered
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-    >
-      <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
-      </NavbarContent>
+    <nav className="border-b border-gray-300">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo placeholder */}
+        <div className="text-xl font-bold">Logo</div>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
-        <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
-        </NavbarBrand>
-      </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
-        </NavbarBrand>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="warning" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+        {/* Desktop Menu */}
+        <div className="hidden sm:flex gap-6 text-sm">
+          {menuItems.map((item) => (
             <Link
-              className="w-full"
-              color={
-                index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
+              key={item}
               href="#"
-              size="lg"
+              className="flex items-center gap-2 text-gray-700 hover:text-gray-900 transition-colors"
             >
+              {item === "United States" && <Globe size={20} />}
               {item}
             </Link>
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
-    </Navbar>
-  );
+          ))}
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button
+          className="sm:hidden text-gray-700"
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMenuOpen ? <X size={24} /> : <List size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-[#111111] z-50 sm:hidden">
+          <div className="flex justify-between items-center px-4 py-4 border-b border-gray-800">
+            <span className="text-lg font-semibold text-white">Menu</span>
+            <button
+              onClick={toggleMenu}
+              className="p-2 hover:bg-gray-800 rounded-lg transition-colors"
+            >
+              <X size={24} color="white" />
+            </button>
+          </div>
+          <div className="px-2 py-4">
+            {menuItems.map((item, index) => (
+              <div key={`${item}-${index}`} className="py-1">
+                <Link
+                  href="#"
+                  className={`w-full px-3 py-2 rounded-lg flex items-center gap-2 transition-colors
+                    ${index === 0 ? 'text-white hover:bg-gray-800' : 'text-gray-300 hover:bg-gray-800 hover:text-white'}
+                    ${index === menuItems.length - 1 ? 'text-red-500 hover:text-red-400' : ''}`}
+                  onClick={toggleMenu}
+                >
+                  {item === "United States" && <Globe size={20} />}
+                  {item}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </nav>
+  )
 }
