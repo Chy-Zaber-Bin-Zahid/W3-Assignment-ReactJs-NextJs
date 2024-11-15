@@ -7,7 +7,7 @@ import { Hotel } from '@/types/hotel'
 
 export default function Component() {
   const [hotels, setHotels] = useState<Hotel[]>([])
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
 
   const fetchHotels = useCallback(async () => {
@@ -29,7 +29,7 @@ export default function Component() {
   }, [fetchHotels])
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 lg:px-8">
+    <div className="py-12 px-4 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Our Hotels</h1>
@@ -47,14 +47,14 @@ export default function Component() {
           </div>
         )}
         {isLoading ? (
-          <div className="flex justify-center items-center h-64">
+          <div className="flex justify-center items-center h-20">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
           </div>
         ) : (
-          <ul className="bg-white shadow overflow-hidden sm:rounded-md">
+          <ul className="bg-blue-50 shadow overflow-hidden sm:rounded-md">
             {hotels.map((hotel) => (
               <li key={hotel.id} className="border-b border-gray-200 last:border-b-0">
-                <Link href={`/hotel-details/${hotel.slug}/${hotel.id}`} className="block hover:bg-gray-50 transition duration-150 ease-in-out">
+                <Link href={`/hotel-details/${hotel.slug}/${hotel.hotelId}`} className="block hover:bg-gray-50 transition duration-150 ease-in-out">
                   <div className="px-4 py-4 sm:px-6">
                     <div className="flex items-center justify-between">
                       <p className="text-lg font-medium text-indigo-600 truncate">{hotel.title}</p>

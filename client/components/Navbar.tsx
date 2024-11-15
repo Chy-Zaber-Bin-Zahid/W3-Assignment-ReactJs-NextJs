@@ -22,7 +22,7 @@ export default function Nav() {
 
   return (
     <nav className="border-b border-gray-300">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="px-4 py-4 flex justify-between items-center">
         {/* Logo placeholder */}
         <div className="text-xl font-bold">Logo</div>
 
