@@ -5,6 +5,7 @@ import { upload } from '../middleware/upload';
 import { createHotel } from '../controllers/hotelCreateController';
 import { getHotel } from '../controllers/hotelFindController';
 import { updateHotel } from '../controllers/hotelUpdateController';
+import { getAllHotel } from '../controllers/hotelAllController';
 
 const router = Router();
 
@@ -15,6 +16,7 @@ type RouteHandler = (
 ) => Promise<void> | void;
 
 router.post('/hotel', createHotel as RouteHandler);
+router.get('/hotel', getAllHotel as RouteHandler);
 router.get('/hotel/:id', getHotel as RouteHandler);
 router.put('/hotel/:id', updateHotel as RouteHandler);
 router.post('/images', upload.array('images', 5), uploadImages as RouteHandler);
