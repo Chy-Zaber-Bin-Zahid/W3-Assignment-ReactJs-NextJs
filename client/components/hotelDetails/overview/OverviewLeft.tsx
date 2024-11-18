@@ -8,7 +8,7 @@ interface OverviewLeftProps {
 
 export default function OverviewLeft({ hotel }: OverviewLeftProps) {
   return (
-    <div className="space-y-6 py-6">
+    <div className="space-y-6 py-6 w-[65%]">
       <div>
         <div className="text-sm text-gray-500">Entire home</div>
         <h1 className="text-[32px] font-semibold mt-2 text-[#222222]">{hotel.title}</h1>

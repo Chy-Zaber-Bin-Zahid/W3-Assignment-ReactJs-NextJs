@@ -1,15 +1,10 @@
 import { Button, Card } from "@nextui-org/react"
-import { Check, Calendar, Info } from "@phosphor-icons/react"
-import type { Hotel } from "@/types/hotel"
+import { Calendar, Info, SealCheck } from "@phosphor-icons/react"
 import Image from 'next/image'
-
-interface BookingCardProps {
-  hotel: Hotel
-}
 
 export default function Component() {
   return (
-    <div className="w-full space-y-4 py-4">
+    <div className="w-[35%] space-y-4 py-4">
       <Card className="bg-[#1a1f36] text-white p-6 flex flex-row justify-center items-center gap-3 rounded-[10px]">
         <div className="">
           <Image
@@ -44,7 +39,7 @@ export default function Component() {
         </div>
 
         <div className="flex items-center gap-2 text-green-600">
-          <Check className="h-4 w-4" weight="bold" />
+          <SealCheck className="h-4 w-4" weight="bold" />
           <span className="text-sm">Your dates are available</span>
         </div>
 
