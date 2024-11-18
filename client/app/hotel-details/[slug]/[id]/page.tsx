@@ -2,9 +2,10 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import axios from 'axios'
-import Gallery from '@/components/hotelDetails/Gallery'
-import Overview from '@/components/hotelDetails/Overview'
+import Gallery from '@/components/hotelDetails/gallery/Gallery'
+import Overview from '@/components/hotelDetails/overview/OverviewNav'
 import { Hotel } from '@/types/hotel'
+import OverviewDetails from '@/components/hotelDetails/overview/OverviewDetails'
 
 export default function HotelDetails() {
   const params = useParams()
@@ -38,6 +39,7 @@ export default function HotelDetails() {
     <div className="container">
       <Gallery hotel={hotel} />
       <Overview/>
+      <OverviewDetails hotel={hotel}/>
     </div>
   )
 }

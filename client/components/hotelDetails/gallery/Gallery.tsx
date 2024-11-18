@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { Button } from "@nextui-org/react"
 import { Image as PhosphorImage } from 'phosphor-react'
-import GalleryHeader from '@/components/hotelDetails/GalleryHeader'
+import GalleryHeader from '@/components/hotelDetails/gallery/GalleryHeader'
 import { Hotel } from '@/types/hotel'
 
 interface GalleryProps {
