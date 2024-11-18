@@ -7,7 +7,7 @@ export default function GalleryHeader() {
     <div className="flex items-center justify-between py-4 font-semibold">
       <Link
         href="#"
-        className="flex items-center gap-2 text-sm text-primary hover:text-primary/80"
+        className="flex items-center gap-2 text-sm text-blue-500 hover:text-blue-600"
       >
         <ArrowLeft size={20} />
         See all properties
