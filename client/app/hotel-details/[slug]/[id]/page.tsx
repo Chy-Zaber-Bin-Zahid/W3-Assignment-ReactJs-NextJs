@@ -44,7 +44,7 @@ export default function HotelDetails() {
       <OverviewDetails hotel={hotel}/>
       <div className="max-w-[793px]">
         <Rooms/>
-        <Property/>
+        <Property hotel={hotel}/>
       </div>
     </div>
   )
