@@ -8,6 +8,7 @@ import { Hotel } from '@/types/hotel'
 import OverviewDetails from '@/components/hotelDetails/overview/OverviewDetails'
 import Rooms from '@/components/hotelDetails/Rooms'
 import Property from '@/components/hotelDetails/Property'
+import Amenities from '@/components/hotelDetails/Amenities'
 
 export default function HotelDetails() {
   const params = useParams()
@@ -45,6 +46,7 @@ export default function HotelDetails() {
       <div className="max-w-[793px]">
         <Rooms/>
         <Property hotel={hotel}/>
+        <Amenities/>
       </div>
     </div>
   )
