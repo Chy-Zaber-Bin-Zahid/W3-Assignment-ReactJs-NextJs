@@ -3,15 +3,15 @@ import Link from "next/link"
 
 export default function Component() {
   const amenities = [
-    { icon: <Knife weight="fill" className="w-5 h-5" />, label: "Kitchen" },
-    { icon: <WifiHigh weight="fill" className="w-5 h-5" />, label: "Dryer" },
-    { icon: <Car weight="fill" className="w-5 h-5" />, label: "Parking available" },
+    { icon: <Knife className="w-5 h-5" />, label: "Kitchen" },
+    { icon: <WifiHigh className="w-5 h-5" />, label: "Dryer" },
+    { icon: <Car className="w-5 h-5" />, label: "Parking available" },
   ]
 
   const amenitiesSecond = [
-    { icon: <WifiHigh weight="fill" className="w-5 h-5" />, label: "Washer" },
-    { icon: <Tree weight="fill" className="w-5 h-5" />, label: "Outdoor Space" },
-    { icon: <Waves weight="fill" className="w-5 h-5" />, label: "Ocean view" },
+    { icon: <WifiHigh className="w-5 h-5" />, label: "Washer" },
+    { icon: <Tree className="w-5 h-5" />, label: "Outdoor Space" },
+    { icon: <Waves className="w-5 h-5" />, label: "Ocean view" },
   ]
 
   return (
