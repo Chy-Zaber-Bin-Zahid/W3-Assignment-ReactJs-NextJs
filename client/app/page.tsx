@@ -1,6 +1,12 @@
 import { Hotels } from '@/types/hotel'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hotel Booking",
+  description: "This is a hotel booking website",
+};
 
 async function getHotels(): Promise<Hotels> {
   const res = await fetch('http://localhost:3001/api/hotel', { cache: 'no-store' })

@@ -41,7 +41,7 @@ export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
          <Faq hotel={hotel}/>
       </div>
       <Review/>
-      <div className='grid grid-cols-[25%_75%] gap-x-6 gap-y-8 mb-8'>
+      <div className='grid grid-cols-[25%_75%] gap-x-6 gap-y-8 mb-8 max-[655px]:grid-cols-1'>
           <h2 className='font-semibold'>About the host</h2>
           <Host hotel={hotel}/>
           <h2 className='font-semibold'>Send a message</h2>

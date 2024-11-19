@@ -46,18 +46,18 @@ export default function GalleryHeader() {
         </Link>
         <div className="flex items-center gap-2">
           <button 
-            className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-full hover:bg-gray-50"
+            className="flex items-center gap-2 px-4 max-[465px]:px-2 py-2 text-sm text-gray-700 bg-white border border-gray-200 rounded-full hover:bg-gray-50"
             onClick={() => setIsShareModalOpen(true)}
           >
             <UploadSimple className="text-blue-500" size={20} />
-            Share
+            <span className="max-[465px]:hidden" >Share</span>
           </button>
           <button
             onClick={handleSaveToggle}
-            className={`flex items-center gap-2 px-4 py-2 text-sm bg-white border border-gray-200 rounded-full hover:bg-gray-50 text-gray-500`}
+            className={`flex items-center gap-2 px-4 max-[465px]:px-2 py-2 text-sm bg-white border border-gray-200 rounded-full hover:bg-gray-50 text-gray-500`}
           >
             <Heart className={`text-red-500`} weight={isSaved ? 'fill' : 'regular'} size={20} />
-            Save
+            <span  className="max-[465px]:hidden" >Save</span>
           </button>
         </div>
       </div>
