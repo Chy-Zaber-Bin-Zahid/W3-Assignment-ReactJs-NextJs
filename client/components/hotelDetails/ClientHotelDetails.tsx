@@ -11,6 +11,7 @@ import Question from '@/components/hotelDetails/Question'
 import Rules from '@/components/hotelDetails/Rules'
 import Information from '@/components/hotelDetails/Information'
 import Faq from '@/components/hotelDetails/Faq'
+import Review from '@/components/hotelDetails/Review'
 
 export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
   return (
@@ -34,6 +35,7 @@ export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
          <h2 className='font-semibold'>Frequently asked questions</h2>
          <Faq/>
       </div>
+      <Review/>
     </div>
   )
 }
