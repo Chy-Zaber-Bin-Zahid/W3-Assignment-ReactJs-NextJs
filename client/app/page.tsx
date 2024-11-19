@@ -33,7 +33,7 @@ export default async function HotelsPage() {
           <h1 className="text-3xl font-bold text-gray-900 text-center w-full">Our Hotels</h1>
         </div>
         <ul className="bg-blue-50 shadow overflow-hidden sm:rounded-md">
-          {hotels.map((hotel) => (
+          {hotels?.length > 0 ? hotels.map((hotel) => (
             <li key={hotel.id} className="border-b border-gray-200 last:border-b-0">
               <Link href={`/hotel-details/${hotel.slug}/${hotel.hotelId}`} className="block hover:bg-gray-50 transition duration-150 ease-in-out">
                 <div className="px-4 py-4 sm:px-6">
@@ -58,7 +58,7 @@ export default async function HotelsPage() {
                 </div>
               </Link>
             </li>
-          ))}
+          )) : <p>No hotel found</p>}
         </ul>
       </div>
     </div>

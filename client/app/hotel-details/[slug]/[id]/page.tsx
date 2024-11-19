@@ -3,7 +3,7 @@ import { Hotel } from '@/types/hotel';
 import ClientHotelDetails from '@/components/hotelDetails/ClientHotelDetails';
 
 // Fetch hotel data
-async function getHotel(id: string): Promise<Hotel> {
+export async function getHotel(id: string): Promise<Hotel> {
   const res = await fetch(`http://localhost:3001/api/hotel/${id}`, { next: { revalidate: 60 } });
 
   if (!res.ok) {
