@@ -59,7 +59,7 @@ export default function Property({ hotel }: PropertyDetails) {
           <div className="flex flex-col items-start justify-center gap-2">
             <Image src="/images/card.png" alt="Property Logo" width={120} height={120} />
             <div>
-              <div>Evolve</div>
+              <div>{hotel.host.name}</div>
               <div className="text-sm text-gray-600 mt-1">
                 Languages
               </div>

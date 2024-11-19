@@ -31,7 +31,7 @@ export default function Review() {
   ]
 
   return (
-    <div className="">
+    <div className="mt-8 mb-10">
       <div className="grid md:grid-cols-[240px,1fr] gap-8">
         <div className="flex flex-col gap-2">
           <div className="flex items-baseline gap-1">

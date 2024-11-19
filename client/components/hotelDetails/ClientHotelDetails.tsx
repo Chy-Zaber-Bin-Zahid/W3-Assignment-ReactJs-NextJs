@@ -12,6 +12,8 @@ import Rules from '@/components/hotelDetails/Rules'
 import Information from '@/components/hotelDetails/Information'
 import Faq from '@/components/hotelDetails/Faq'
 import Review from '@/components/hotelDetails/Review'
+import Host from '@/components/hotelDetails/Host'
+import Message from '@/components/hotelDetails/Message'
 
 export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
   return (
@@ -36,6 +38,12 @@ export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
          <Faq/>
       </div>
       <Review/>
+      <div className='grid grid-cols-[25%_75%] gap-x-6 gap-y-8 mb-8'>
+          <h2 className='font-semibold'>About the host</h2>
+          <Host hotel={hotel}/>
+          <h2 className='font-semibold'>Send a message</h2>
+          <Message/>
+      </div>
     </div>
   )
 }

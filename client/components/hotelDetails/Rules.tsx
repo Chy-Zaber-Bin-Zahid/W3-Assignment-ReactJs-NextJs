@@ -5,7 +5,7 @@ import { Baby, Clock, Prohibit, Dog } from "@phosphor-icons/react"
 export default function Rules() {
   return (
     <Card className="">
-      <CardBody className="gap-3">
+      <CardBody className="gap-3 px-0">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
