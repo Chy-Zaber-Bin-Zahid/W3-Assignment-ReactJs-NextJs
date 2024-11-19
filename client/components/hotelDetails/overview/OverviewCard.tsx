@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 export default function Component() {
   return (
-    <div className="w-[35%] space-y-4 py-4">
-      <Card className="bg-[#1a1f36] text-white p-6 flex flex-row justify-center items-center gap-3 rounded-[10px]">
+    <div className="w-[35%] space-y-4 py-4 max-[1230px]:w-full max-[1230px]:max-w-[500px] max-[1230px]:mx-auto">
+      <Card className="bg-[#1a1f36] text-white p-6 flex flex-row justify-center items-center gap-3 rounded-[10px] max-[1230px]:justify-start">
         <div className="">
           <Image
               src="/images/card.png"

@@ -7,7 +7,7 @@ export default function Rooms() {
       <div className="space-y-4">
         <h2 className="text-2xl font-semibold text-[#1D1B20]">Rooms & beds</h2>
         <p className="text-lg font-medium">2 bedrooms <span className="text-gray-600 font-normal">(sleeps 4)</span></p>
-        <div className="grid grid-cols-2 gap-8 border-b-[2px] pb-8">
+        <div className="grid grid-cols-2 gap-8 border-b-[2px] pb-8 max-[555px]:grid-cols-1">
           <div>
             <h3 className="font-medium mb-2">Bedroom 1</h3>
             <div className="flex flex-col items-start gap-2">

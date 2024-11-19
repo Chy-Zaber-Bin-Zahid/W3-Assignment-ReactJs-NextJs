@@ -8,7 +8,7 @@ interface OverviewLeftProps {
 
 export default function OverviewLeft({ hotel }: OverviewLeftProps) {
   return (
-    <div className="space-y-6 py-6 w-[65%]">
+    <div className="space-y-6 py-6 w-[65%] max-[1230px]:w-full">
       <div>
         <div className="text-sm text-gray-500">Entire home</div>
         <h1 className="text-[32px] font-semibold mt-2 text-[#222222]">{hotel.title}</h1>
@@ -67,7 +67,7 @@ export default function OverviewLeft({ hotel }: OverviewLeftProps) {
         <div className="rounded-lg mb-4">
           <div className="flex gap-4 justify-start items-end">
             <div className="flex-1">
-                <div className="bg-white w-full rounded-[20px] overflow-hidden flex flex-col items-start max-w-sm border border-gray-200">
+                <div className="bg-white w-full rounded-[20px] overflow-hidden flex flex-col items-start border border-gray-200">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.831123680264!2d-134.4197406!3d58.301944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5400cf4d6a735a07%3A0x548ee3c3dff8d05a!2sJuneau%2C%20AK!5e0!3m2!1sen!2sus!4v123456789"
                     width="100%"

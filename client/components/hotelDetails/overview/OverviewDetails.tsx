@@ -8,7 +8,7 @@ interface OverviewDetails {
 
 function OverviewDetails( { hotel }: OverviewDetails) {
   return (
-    <div className='flex gap-10'>
+    <div className='flex gap-10 max-[1230px]:flex-col'>
         <OverviewLeft hotel={hotel}/>
         <OverviewCard />
     </div>

@@ -16,9 +16,9 @@ export default function Component() {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-3 gap-4" >
+      <div className="grid grid-cols-3 gap-4 max-[522px]:grid-cols-1" >
         <h2 className="text-2xl font-semibold tracking-tight">Amenities</h2>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 max-[522px]:order-last">
           {amenities.map((amenity, index) => (
             <div key={index} className="flex items-center gap-3">
               <div className="text-gray-500">{amenity.icon}</div>

@@ -116,12 +116,12 @@ export default function Gallery({ hotel }: GalleryProps) {
                 <X size={24} />
               </button>
             </div>
-            <div className="relative flex-grow">
+            <div className="relative flex-grow overflow-hidden bg-red-500">
               <Image
                 src={`http://localhost:3001${hotel.images[currentImageIndex]}`}
                 alt={`${hotel.title} - Image ${currentImageIndex + 1}`}
                 fill
-                className="object-contain"
+                className="object-cover"
               />
             </div>
             <div className="flex justify-between items-center p-4 bg-black/50">
