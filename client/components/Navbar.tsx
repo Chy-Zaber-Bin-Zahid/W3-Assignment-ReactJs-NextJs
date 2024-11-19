@@ -159,7 +159,6 @@ export default function Nav() {
       >
         <ModalContent className="max-w-[400px] rounded-lg bg-white border-2">
           <ModalHeader className="flex items-center gap-1">
-            <X size={20} className="text-gray-400 cursor-pointer" onClick={onClose} />
             <h3 className="text-base font-medium">Display settings</h3>
           </ModalHeader>
           <ModalBody>
