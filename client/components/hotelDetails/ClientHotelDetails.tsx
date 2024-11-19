@@ -14,6 +14,7 @@ import Faq from '@/components/hotelDetails/Faq'
 import Review from '@/components/hotelDetails/Review'
 import Host from '@/components/hotelDetails/Host'
 import Message from '@/components/hotelDetails/Message'
+import Cancellation from '@/components/hotelDetails/Cancellation'
 
 export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
   return (
@@ -32,6 +33,8 @@ export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
          <Rules/>
          <h2 className='font-semibold'>Damage and incidentals</h2>
          <p>You will be responsible for any damage to rental property caused by you or your party during your stay.</p>
+         <h2 className='font-semibold' >Cancellation</h2>
+         <Cancellation/>
          <h2 className='font-semibold'>Important information</h2>
          <Information/>
          <h2 className='font-semibold'>Frequently asked questions</h2>
