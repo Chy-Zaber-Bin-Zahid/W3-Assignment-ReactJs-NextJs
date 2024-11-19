@@ -28,7 +28,7 @@ export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
         <Amenities />
       </div>
       <Question/>
-      <div className='grid grid-cols-[25%_75%] gap-x-6 gap-y-8' >
+      <div className='grid grid-cols-[25%_75%] gap-x-6 gap-y-8 max-[655px]:grid-cols-1' >
          <h2 className='font-semibold'>House Rules</h2>
          <Rules/>
          <h2 className='font-semibold'>Damage and incidentals</h2>
@@ -38,7 +38,7 @@ export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
          <h2 className='font-semibold'>Important information</h2>
          <Information/>
          <h2 className='font-semibold'>Frequently asked questions</h2>
-         <Faq/>
+         <Faq hotel={hotel}/>
       </div>
       <Review/>
       <div className='grid grid-cols-[25%_75%] gap-x-6 gap-y-8 mb-8'>

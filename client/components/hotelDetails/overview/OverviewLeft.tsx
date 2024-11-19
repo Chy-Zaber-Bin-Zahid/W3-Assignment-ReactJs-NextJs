@@ -64,9 +64,19 @@ export default function OverviewLeft({ hotel }: OverviewLeftProps) {
 
       <div>
         <h2 className="text-xl font-semibold mb-4">Explore the area</h2>
+        <div className='min-[765px]:hidden mb-4 flex justify-between items-center' >
+            <div >
+              <div className='flex gap-2 justify-start items-center'>
+                <h2 className='font-semibold text-xl' >$134</h2>
+                <span>per night</span>
+              </div>
+              <a href="#" className='text-blue-500 underline' >Price details</a>
+            </div>
+            <button className='bg-blue-500 rounded-[100px] pt-2 pb-1 px-4 text-white font-semibold'>Book Now</button>
+        </div>
         <div className="rounded-lg mb-4">
-          <div className="flex gap-4 justify-start items-end">
-            <div className="flex-1">
+          <div className="flex gap-4 justify-start items-end max-[765px]:flex-col ">
+            <div className="flex-1 max-[765px]:w-full">
                 <div className="bg-white w-full rounded-[20px] overflow-hidden flex flex-col items-start border border-gray-200">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.831123680264!2d-134.4197406!3d58.301944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5400cf4d6a735a07%3A0x548ee3c3dff8d05a!2sJuneau%2C%20AK!5e0!3m2!1sen!2sus!4v123456789"
@@ -89,7 +99,7 @@ export default function OverviewLeft({ hotel }: OverviewLeftProps) {
                   </div>
                 </div>
             </div>
-            <div className="space-y-2 flex-1">
+            <div className="space-y-2 flex-1 max-[765px]:w-full">
             {[
               { name: "Auke Bay", time: "6 min drive" },
               { name: "University of Alaska-Southeast", time: "10 min drive" },

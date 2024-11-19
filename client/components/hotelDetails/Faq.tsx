@@ -2,8 +2,14 @@
 
 import { Accordion, AccordionItem } from "@nextui-org/accordion"
 import { CaretDown } from "@phosphor-icons/react"
+import { Hotel } from '@/types/hotel'
 
-export default function Faq() {
+interface PropertyDetails {
+    hotel: Hotel
+  }
+
+
+export default function Faq({ hotel }: PropertyDetails) {
   const defaultContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   
   return (
@@ -21,7 +27,7 @@ export default function Faq() {
       <AccordionItem
         key="1"
         aria-label="Is Juneau Vacation Home pet-friendly"
-        title="Is Juneau Vacation Home: Stunning View + Beach Access pet-friendly?"
+        title={`Is ${hotel.title} pet-friendly?`}
         indicator={<CaretDown className="text-default-500 w-5 h-5" />}
       >
         {defaultContent}
@@ -29,7 +35,7 @@ export default function Faq() {
       <AccordionItem
         key="2"
         aria-label="Check-in time"
-        title="What time is check-in at Juneau Vacation Home: Stunning View + Beach Access?"
+        title={`What time is check-in at ${hotel.title}?`}
         indicator={<CaretDown className="text-default-500 w-5 h-5" />}
       >
         {defaultContent}
@@ -37,7 +43,7 @@ export default function Faq() {
       <AccordionItem
         key="3"
         aria-label="Check-out time"
-        title="What time is check-out at Juneau Vacation Home: Stunning View + Beach Access?"
+        title={`What time is check-out at ${hotel.title}?`}
         indicator={<CaretDown className="text-default-500 w-5 h-5" />}
       >
         {defaultContent}
@@ -45,7 +51,7 @@ export default function Faq() {
       <AccordionItem
         key="4"
         aria-label="Location"
-        title="Where is Juneau Vacation Home: Stunning View + Beach Access located?"
+        title={`Where is ${hotel.title} located?`}
         indicator={<CaretDown className="text-default-500 w-5 h-5" />}
       >
         {defaultContent}
