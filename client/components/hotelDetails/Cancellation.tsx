@@ -32,7 +32,7 @@ export default function Cancellation() {
               <div className="flex flex-col items-start ">
                 <span className="text-sm text-gray-600 mb-9 "></span>
                 <div className="relative">
-                  <div className="absolute h-[2px] bg-gray-200 w-[calc(100vw*0.29)] right-2 top-[5px]" />
+                  <div className="absolute h-[2px] bg-gray-200 w-[calc(100vw*0.21)] right-2 top-[5px]" />
                   <Circle className="w-3 h-3 text-gray-400 relative z-10" />
                 </div>
                 <span className="text-sm font-medium text-gray-900 mt-2">Check-in</span>

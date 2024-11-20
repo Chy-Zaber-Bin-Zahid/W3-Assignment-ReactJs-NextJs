@@ -47,7 +47,7 @@ export default function OverviewLeft({ hotel }: OverviewLeftProps) {
       <div>
         <h2 className="text-xl font-semibold mb-4">Popular amenities</h2>
         <div className="grid grid-cols-2 gap-4 gap-x-12">
-          {hotel.amenities.map((amenity, index) => (
+          {hotel?.amenities?.map((amenity, index) => (
             <div key={index} className="flex items-center gap-3">
               <Car size={24} weight="light" />
               <span>{amenity}</span>

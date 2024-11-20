@@ -1,7 +1,7 @@
 import { Knife, Waves, Tree, Car, WifiHigh } from "@phosphor-icons/react"
 import Link from "next/link"
 
-export default function Component() {
+export default function Amenities() {
   const amenities = [
     { icon: <Knife className="w-5 h-5" />, label: "Kitchen" },
     { icon: <WifiHigh className="w-5 h-5" />, label: "Dryer" },

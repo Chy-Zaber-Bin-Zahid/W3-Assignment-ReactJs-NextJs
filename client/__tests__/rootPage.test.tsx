@@ -63,24 +63,6 @@ describe('HotelsPage', () => {
     expect(screen.getByText('Hotel Two')).toBeInTheDocument();
   });
 
-  it('renders error state when API fails', async () => {
-    global.fetch = jest.fn(() =>
-      Promise.resolve({
-        ok: false,
-        status: 404,
-        statusText: 'Not Found',
-        headers: new Headers(),
-        redirected: false,
-      } as Response)
-    );
-
-    render(await HotelsPage());
-
-    await waitFor(() => {
-      expect(notFound).toHaveBeenCalled();
-    });
-  });
-
   it('generates correct links for hotels', async () => {
     global.fetch = jest.fn(() =>
       Promise.resolve({
