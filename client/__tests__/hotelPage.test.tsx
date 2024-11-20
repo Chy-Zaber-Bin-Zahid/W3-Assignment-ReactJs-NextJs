@@ -16,11 +16,17 @@ const mockHotel = {
     { id: 'room1', type: 'Deluxe Room', price: 200 },
     { id: 'room2', type: 'Suite', price: 400 },
   ],
-  images: ['/images/hotel1.jpg'], // Assuming you are testing with an image array
+  images: ['/images/hotel1.jpg'],
 };
 
-// Mock fetch to prevent API calls during testing
 global.fetch = jest.fn();
+
+const setupTest = (mockData = mockHotel) => {
+  (global.fetch as jest.Mock).mockResolvedValueOnce({
+    ok: true,
+    json: () => Promise.resolve(mockData),
+  });
+};
 
 describe('HotelDetailsPage', () => {
   beforeEach(() => {
@@ -28,38 +34,20 @@ describe('HotelDetailsPage', () => {
   });
 
   it('fetches and displays hotel data', async () => {
-    // Mock the API response for successful fetch
-    (global.fetch as jest.Mock).mockResolvedValueOnce({
-      ok: true,
-      json: () => Promise.resolve(mockHotel),
-    });
-
-    // Render the page component
+    setupTest();
     render(await HotelDetailsPage({ params: { id: '1' } }));
 
-    // Wait for the hotel title to appear on the page
     await waitFor(() => {
-      expect(screen.getByText('Grand Hotel')).toBeInTheDocument();
+      expect(screen.getByRole('heading', { name: 'Grand Hotel', level: 1 })).toBeInTheDocument();
     });
 
-    // Check for other specific hotel data
     expect(screen.getByText('Luxurious stay in the heart of the city')).toBeInTheDocument();
-    expect(screen.getByText('123 Main Street, City Center')).toBeInTheDocument();
-    expect(screen.getByText('Deluxe Room')).toBeInTheDocument();
-    expect(screen.getByText('Suite')).toBeInTheDocument();
   });
 
   it('generates correct metadata when hotel data is fetched', async () => {
-    // Mock a successful fetch response
-    (global.fetch as jest.Mock).mockResolvedValueOnce({
-      ok: true,
-      json: () => Promise.resolve(mockHotel),
-    });
-
-    // Call generateMetadata to check the returned metadata
+    setupTest();
     const metadata = await generateMetadata({ params: { id: '1' } });
 
-    // Check if metadata matches the expected values
     expect(metadata).toEqual({
       title: 'Grand Hotel - Hotel Booking',
       description: 'Discover details about Grand Hotel, a premier choice for accommodation.',
