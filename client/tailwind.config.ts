@@ -11,10 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-      },
-      maxWidth: {
-        container: "1450px",
-      },
+      }
     },
   },
   plugins: [],
