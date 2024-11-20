@@ -16,4 +16,4 @@
 
 Create an `.env` file in the `server` directory and add the following variables:
 
-- `PORT=3000`
+- `PORT=3001`
