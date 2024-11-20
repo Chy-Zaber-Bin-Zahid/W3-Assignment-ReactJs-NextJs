@@ -18,7 +18,7 @@ import Cancellation from '@/components/hotelDetails/Cancellation'
 
 export default function ClientHotelDetails({ hotel }: { hotel: Hotel }) {
   return (
-    <div className="container">
+    <div className="container p-0">
       <Gallery hotel={hotel} />
       <Overview />
       <OverviewDetails hotel={hotel} />
