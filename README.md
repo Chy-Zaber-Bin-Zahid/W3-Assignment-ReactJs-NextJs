@@ -11,8 +11,8 @@
 
 ## Client
 - `cd W3-Assignment-ReactJs-NextJs/client`
-- `npm install -D jest @types/jest ts-jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom`
 - `npm install`
+- `npm install -D jest @types/jest ts-jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom`
 - `npm run dev`
 - `npm test -- --coverage`
 
